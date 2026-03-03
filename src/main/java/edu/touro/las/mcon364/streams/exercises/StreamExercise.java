@@ -198,7 +198,6 @@ public class StreamExercise {
      * }
      */
     public Map<String, List<String>> groupByPerformance() {
-        // TODO: Implement using streams
         // Hint: Use Collectors.groupingBy() with a classifier function
         return gradebook.keySet().stream()
                 .collect(Collectors.groupingBy(s -> getLetterGrade(calculateAverage(s))));
